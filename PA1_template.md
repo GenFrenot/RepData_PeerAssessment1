@@ -80,7 +80,7 @@ Getting the mean total number of steps by day
 mean_steps_by_day<-round(mean(steps_by_day$steps,na.rm=TRUE))
 mean_steps_by_day_t<-format(mean_steps_by_day,big.mark=" ", big.interval=3)
 ```
-###The mean total number of stepy by day is: 10 766
+The mean total number of stepy by day is: 10 766
 
 Getting the median total number of steps by day
 
@@ -88,7 +88,7 @@ Getting the median total number of steps by day
 median_steps_by_day<-round(median(steps_by_day$steps,na.rm=TRUE))
 median_steps_by_day_t<-format(median_steps_by_day,big.mark=" ", big.interval=3)
 ```
-###The median total number of stepy by day is: 10 765
+The median total number of stepy by day is: 10 765
 
 Visualizing on a histogram "Distribution of the total number of steps by day"
 
@@ -160,8 +160,8 @@ axis(1,at=peak$interval,label=peak$interval)
 
 ![](PA1_template_files/figure-html/unnamed-chunk-11-1.png)<!-- -->
 
-###The 5-minute interval containing the maximum number of steps averaged 
-###across all days is: 835
+The 5-minute interval containing the maximum number of steps averaged 
+across all days is: 835
 
 
 
@@ -173,7 +173,7 @@ Calculating the total number of missing values in the dataset
 nb_na<-length(activity$steps[is.na(activity$steps)])
 nb_na_t<-format(nb_na,big.mark=" ", big.interval=3)
 ```
-###The number of missing values is: 2 304
+The number of missing values is: 2 304
 
 
 Creating a new dataset equal to the original but with the missing data filled in
@@ -204,7 +204,7 @@ Getting the imputed mean total number of steps by day
 mean_steps_by_day2<-round(mean(steps_by_day2$steps,na.rm=TRUE))
 mean_steps_by_day2_t<-format(mean_steps_by_day2,big.mark=" ", big.interval=3)
 ```
-###The estimated mean total number of stepy by day with imputed data is: 10 766
+The estimated mean total number of stepy by day with imputed data is: 10 766
 The NA values did not influence the mean total number of steps
 
 Getting the imputed median total number of steps by day
@@ -213,7 +213,7 @@ Getting the imputed median total number of steps by day
 median_steps_by_day2<-round(median(steps_by_day2$steps,na.rm=TRUE))
 median_steps_by_day2_t<-format(median_steps_by_day2,big.mark=" ",big.interval=3)
 ```
-###The estimated median total number of stepy by day with imputed data is: 10 766
+The estimated median total number of stepy by day with imputed data is: 10 766
 The NA values did not influence much the meadian total number of steps
 
 Visualizing on a histogram "Distribution of the imputed total steps by day"
