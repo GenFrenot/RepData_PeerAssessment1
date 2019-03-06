@@ -287,7 +287,7 @@ axis(1,at=peak$interval,label=peak$interval)    </code></pre>
 <pre class="r"><code>nb_na&lt;-length(activity$steps[is.na(activity$steps)])
 nb_na_t&lt;-format(nb_na,big.mark=&quot; &quot;, big.interval=3)</code></pre>
 <p>The number of missing values is: 2 304</p>
-<p>Creating a new dataset equal to the original but with the missing data filled in</p>
+<p>Creating a new dataset equal to the original with the missing data filled in. We replace NA values with the average non-null number of steps for the same interval across all the days. For this, we reuse the average daily activity calculated right before.</p>
 <pre class="r"><code>activity2 &lt;- activity
 activity2$steps[is.na(activity2$steps)] &lt;-
     subset(steps_pattern,interval=activity2$interval)$steps</code></pre>

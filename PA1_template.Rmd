@@ -148,7 +148,10 @@ nb_na_t<-format(nb_na,big.mark=" ", big.interval=3)
 The number of missing values is: `r nb_na_t`
 
 
-Creating a new dataset equal to the original but with the missing data filled in
+Creating a new dataset equal to the original with the missing data filled in.
+We replace NA values with the average non-null number of steps 
+for the same interval across all the days. 
+For this, we reuse the average daily activity calculated right before.
 ```{r}
 activity2 <- activity
 activity2$steps[is.na(activity2$steps)] <-
